@@ -1,5 +1,0 @@
----
-triple:          'arm64-apple-darwin'
-binary-path:     '/Users/ljj/ljj_personal/SocketTest/socketClient'
-relocations:     []
-...
