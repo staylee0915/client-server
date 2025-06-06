@@ -12,12 +12,12 @@ using namespace std;
 
 const int port = 9032;
 #define BUF_SIZE 128;
-vector<threadInfo> cthreadInfo; // thread 관리를 위한 vector
 //스레드에 전달될 매개변수.
 struct threadInfo{
     int clientSocket; //클라이언트 소켓 번호
     sockaddr_in clientAddr; //클라이언트 ip정보
 };
+vector<threadInfo*> cthreadInfo; // thread 관리를 위한 vector
 
 //공유원에 접근하는 것을 관리하기 위해 critical section 정의가 필요.
 //추후 필요에 따라 작성
