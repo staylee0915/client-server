@@ -53,9 +53,13 @@ void *acceptThread(void *arg){
         //전달받은 내용을 데이터를 전송한 client에 전송.
         send(clientSocket,sRecvBuffer,Recv,0);
 
+        //1. 브로드캐스트로 모든 client에 전송
+            cthreadInfo.push_back(clientSocket)
+        //2. 헬스체크
+
+        //3. DB저장
         //! 추후 데이터 저장 (db) -> 임계구역 처리 필요
 
-        //멀티플렉싱 처리 필요. (모든 client에게 메세지 전송)
         //서버에 데이터를 전송한다면 굳이 필요한 작업일까
         //채팅, 게임과 같은 응답속도가 중요한 영역에서는 필요하나
         //목적이 재고관리 통신을 위한 바, 필요없을 것으로 생각.
